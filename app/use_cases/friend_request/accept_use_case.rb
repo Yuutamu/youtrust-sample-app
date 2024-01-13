@@ -3,6 +3,7 @@ class FriendRequest::AcceptUseCase
 
   attr_reader :operation_user, :friend_request
 
+  # 権限
   validate :validate_operation_user
 
   # runメソッドの中でrun が呼ばれていて...!?だったが、includeしてきたモジュールのrun（**args）メソッド

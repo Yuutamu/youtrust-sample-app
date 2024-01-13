@@ -6,6 +6,7 @@ class FriendRequest::SendUseCase
   def run
     command = ApplicationRecord.transaction do
       User.lock_users(operation_user, to_user) # 排他制御のロックを取得
+      # FriendRequest::CreateCommand を記述することで名前の衝突を避ける
       FriendRequest::CreateCommand.run(from_user: operation_user, to_user: to_user)
     end
 
