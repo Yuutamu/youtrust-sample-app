@@ -1,3 +1,5 @@
+## Clone元レポジトリ
+
 本レポジトリは、[株式会社YOUTRUST](https://youtrust.co.jp/)が提供する[キャリアSNS「YOUTRUST」](https://youtrust.jp/)で利用しているRailsのサンプルコードです。
 
 ## 起動方法
