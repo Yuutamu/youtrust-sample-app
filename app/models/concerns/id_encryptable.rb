@@ -43,6 +43,7 @@ module IdEncryptable
       )
     end
 
+    # modelsも親に定義されている（ここから見直したい）
     def encrypted_id
       self.class.encrypt_id(id)
     end
