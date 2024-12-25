@@ -1,3 +1,5 @@
+# MEMO:この設計では、rutes.rb にて叩くAPI を指定している
+
 Rails.application.routes.draw do
   namespace :api, format: 'json' do
     post 'session', to: 'session#create' # ログイン
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
     ##########
 
     # [ids] 検索結果のユーザーIDsを取得
+    # MEMO:search_users コントローラーの index アクションが呼び出される
     get 'search_users', to: 'search_users#index'
 
     # [resources] リスト用ユーザー情報をIDs指定でリソース取得
