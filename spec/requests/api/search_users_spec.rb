@@ -11,6 +11,8 @@ RSpec.describe '/api/search_users' do
       before do
         sign_in current_user
 
+        # let 遅延評価なので、呼び出しておいてテストが実行される前にuserオブジェクトを作成しておく
+        # before ブロックの上で、遅延評価ではなく、即時評価によりuserオブジェクトを読んでおけば、beforeブロック内でuserオブジェクトを呼び出す必要はなくなる
         user1
         user2
       end

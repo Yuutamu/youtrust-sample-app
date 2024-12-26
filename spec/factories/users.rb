@@ -10,5 +10,7 @@
 FactoryBot.define do
   factory :user do
     sequence(:name) { |n| "user#{n}" }
+    # mail をユニークで生成する場合
+    # sequence(:email) { |n| "user#{n}@example.com" }
   end
 end
