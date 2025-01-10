@@ -26,6 +26,15 @@ RSpec.describe '/api/user_notifications' do
               user_notification2.encrypted_id,
             ],
           },
+          # MEMO:JSONのほうがよいのでは？なぜ、ハッシュで書いているのか。
+          # expect(response_body).to eq(
+          #   {
+          #     "ids": [
+          #       "encrypted_id_of_user1",
+          #       "encrypted_id_of_user2"
+          #     ]
+          #   }
+          # )
         )
       end
     end
