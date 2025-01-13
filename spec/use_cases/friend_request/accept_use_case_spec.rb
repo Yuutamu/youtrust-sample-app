@@ -1,3 +1,5 @@
+# MEMO:「友達申請処理」におけるusecase層での責務、usecase層に対応するテスト（本ファイル）が凄く勉強にるので、この設計は毎回は見直したい。
+
 require 'rails_helper'
 
 RSpec.describe FriendRequest::AcceptUseCase do
