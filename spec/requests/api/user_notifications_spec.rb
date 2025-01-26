@@ -19,6 +19,7 @@ RSpec.describe '/api/user_notifications' do
         get '/api/user_notifications'
 
         expect(response).to have_http_status(:ok)
+        # 
         expect(response_body).to eq(
           {
             'ids' => [
@@ -27,6 +28,16 @@ RSpec.describe '/api/user_notifications' do
             ],
           },
         )
+        # MEMO:以下のように、JSON形式でも良いはず。というか、こちらのほうが良いのでは？
+        # MEMO: => を使うということはルビーのハッシュ記法なので、JSONパースされる前
+        # expect(response_body).to eq(
+        #   {
+        #     "ids": [
+        #       "encrypted_id_of_user1",
+        #       "encrypted_id_of_user2"
+        #     ]
+        #   }
+        # )
       end
     end
 
